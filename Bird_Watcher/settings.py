@@ -32,7 +32,9 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',
-    'birdlist.apps.BirdlistConfig',
+    'user.apps.UserConfig',
+    'audio.apps.AudioConfig',
+    'image.apps.ImageConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
