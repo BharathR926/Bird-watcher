@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'user.apps.UserConfig',
+    'birdlist.apps.BirdlistConfig',
     'audio.apps.AudioConfig',
     'image.apps.ImageConfig',
     'birdinfo.apps.BirdinfoConfig',
