@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'user.apps.UserConfig',
     'audio.apps.AudioConfig',
     'image.apps.ImageConfig',
+    'birdinfo.apps.BirdinfoConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
