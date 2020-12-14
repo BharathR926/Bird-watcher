@@ -1,16 +1,17 @@
-{% extends 'base.html'%} {% block content%}
+{% extends 'base.html'%} {%load static %} {% block content%}
 <!-- navbar -->
-<header>
+
+<header class="human">
     <div class="navbar-fixed ">
         <nav class="nav-wrapper green">
             <div class="container">
-                <a href="#" class="brand-logo">Bird Watcher</a>
+                <a href="{% url 'home'%}" class="brand-logo">Bird Watcher</a>
                 <a href="#" class="sidenav-trigger" data-target="mobile-menu">
                     <i class="material-icons">menu</i>
                 </a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="Home.html">Home</a></li>
-                    <li><a href="Birds.html">Birds</a></li>
+                    <li><a href="{% url 'home'%}">Home</a></li>
+                    <li><a href="{% url 'birdlist'%}">Birds</a></li>
                     <li><a href="#feedback">FeedBack</a></li>
                     <li><a href="#About">About</a></li>
 
@@ -33,7 +34,7 @@
                 </ul>
 
                 <ul class="sidenav #e0e0e0 grey lighten-2" id="mobile-menu">
-                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="{% url 'home'%}">Home</a></li>
                     <li><a href="Birds.html">Birds</a></li>
                     <li><a href="#feedback">Feedback</a></li>
                     <li><a href="#About">About</a></li>
@@ -47,19 +48,19 @@
 <section class="container section " id="photo">
     <div class="row">
         <div class="col s12 l4">
-            <img src="images/camera.png" alt="" class="responsive-img materialboxed">
+            <img src="{% static 'images/camera.png' %}" alt=" " class="responsive-img materialboxed ">
         </div>
-        <div class="col s12 l6 offset-l1">
-            <h2 class="indigo-text text-darken-4">Photos</h2>
+        <div class="col s12 l6 offset-l1 ">
+            <h2 class="indigo-text text-darken-4 ">Photos</h2>
             <p>lo amogh images quality bagge matadu.</p>
         </div>
     </div>
-    <div class="row">
-        <div class="col s12 l4 offset-l1 push-l7">
-            <img src="images/recording.jpg" alt="" class="responsive-img materialboxed">
+    <div class="row ">
+        <div class="col s12 l4 offset-l1 push-l7 ">
+            <img src="{% static 'images/recording.jpg' %}" alt=" " class="responsive-img materialboxed ">
         </div>
-        <div class="col s12 l6 offset-l1 pull-l5 right-align">
-            <h2 class="indigo-text text-darken-4">Recordings</h2>
+        <div class="col s12 l6 offset-l1 pull-l5 right-align ">
+            <h2 class="indigo-text text-darken-4 ">Recordings</h2>
             <p>lo illi Audio professional record madtare anta helu.</p>
         </div>
     </div>
@@ -67,58 +68,12 @@
 
 </section>
 <!-- parallax -->
-<div class="parallax-container">
-    <div class="parallax">
-        <img src="images/palax.jpg" alt="" class="responsive-img">
+<div class="parallax-container ">
+    <div class="parallax ">
+        <img src="{% static 'images/palax.jpg' %}" alt=" " class="responsive-img ">
     </div>
 </div>
 
-<!-- contact form -->
-<section class="section container scrollspy" id="feedback">
-    <div class="row">
-        <div class="col s12 l5">
-            <h2 class="indigo-text text-darken-4">FeedBack</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
-            <p>Mauris dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida urna, vitae scelerisque erat ornare nec.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
-            <p>Mauris dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida urna, vitae scelerisque erat ornare nec.</p>
-        </div>
-        <div class="col s12 l5 offset-l2">
-            <form>
-                <div class="input-field">
-                    <i class="material-icons prefix">email</i>
-                    <input type="email" id="email">
-                    <label for="email">Your Email</label>
-                </div>
-                <div class="input-field">
-                    <i class="material-icons prefix">message</i>
-                    <textarea id="message" class="materialize-textarea" cols="20" rows="20"></textarea>
-                    <label for="message">Your Message</label>
-                </div>
 
 
-
-
-                <div class="input-field center">
-                    <button class="btn">Submit</button>
-                </div>
-                <div class="stars">
-                    <form action="">
-                        <input class="star star-5" id="star-5" type="radio" name="star" />
-                        <label class="star star-5" for="star-5"></label>
-                        <input class="star star-4" id="star-4" type="radio" name="star" />
-                        <label class="star star-4" for="star-4"></label>
-                        <input class="star star-3" id="star-3" type="radio" name="star" />
-                        <label class="star star-3" for="star-3"></label>
-                        <input class="star star-2" id="star-2" type="radio" name="star" />
-                        <label class="star star-2" for="star-2"></label>
-                        <input class="star star-1" id="star-1" type="radio" name="star" />
-                        <label class="star star-1" for="star-1"></label>
-                    </form>
-                </div>
-            </form>
-
-        </div>
-    </div>
-</section>
 {% endblock%}

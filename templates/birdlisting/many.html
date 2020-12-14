@@ -1,0 +1,132 @@
+{% extends 'base.html'%} {%load static %} {% block content%}
+
+
+
+<div class="navbar-fixed ">
+    <nav class="nav-wrapper green">
+        <div class="container">
+            <a href="#" class="brand-logo">Bird Watcher</a>
+            <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="{% url 'home'%}">Home</a></li>
+                <li><a href="Birds.html">Birds</a></li>
+                <li><a href="#feedback">FeedBack</a></li>
+                <li><a href="#About">About</a></li>
+
+                <a href="log-in.html" class="waves-effect waves-light #c6ff00 lime accent-3 black-text btn" style="border-radius: 50px;">Login</a>
+                <li>
+                    <a href="#" class="tooltipped btn-floating btn-small red accent-3" data-position="bottom" data-tooltip="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="tooltipped btn-floating btn-small indigo darken-4" data-position="bottom" data-tooltip="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="tooltipped btn-floating btn-small  blue lighten-1" data-position="bottom" data-tooltip="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="sidenav #e0e0e0 grey lighten-2" id="mobile-menu">
+                <li><a href="{% url 'home'%}">Home</a></li>
+                <li><a href="Birds.html">Birds</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#About">About</a></li>
+
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper">
+    <div class="search_box">
+        <input type="text" placeholder="what are you looking for?">
+        <i class="fas fa-search"></i>
+    </div>
+</div>
+<div class="container">
+
+    <div class="row">
+        <div class="col s12 l4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/b1.jpg" alt="">
+
+                </div>
+                <div class="card-content">
+                    <span class="card-title">bird name</span>
+                    <ul>
+                        <li>scientifi name: blah blah</li>
+                        <li>origin name: blah blah</li>
+                        <li>scientific name: blah blah</li>
+                        <li><i class="material-icons">volume_up</i>------<i class="material-icons hover">file_download</i></li>
+
+                    </ul>
+                </div>
+                <div class="card-action">
+                    <a href="birdname.html">More details</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="col s12 l4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/b1.jpg" alt="">
+
+                </div>
+                <div class="card-content">
+                    <span class="card-title">bird name</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                </div>
+                <div class="card-action">
+                    <a href="birdname.html">More details</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="col s12 l4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/b1.jpg" alt="">
+
+                </div>
+                <div class="card-content">
+                    <span class="card-title">bird name</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                </div>
+                <div class="card-action">
+                    <a href="birdname.html">More details</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="col s12 l4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/b1.jpg" alt="">
+
+                </div>
+                <div class="card-content">
+                    <span class="card-title">bird name</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                </div>
+                <div class="card-action">
+                    <a href="birdname.html">More details</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

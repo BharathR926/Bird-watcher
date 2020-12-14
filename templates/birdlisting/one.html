@@ -1,0 +1,85 @@
+{% extends 'base.html'%} {%load static %} {% block content%}
+
+<div class="navbar-fixed ">
+    <nav class="nav-wrapper green">
+        <div class="container">
+            <a href="Home.html" class="brand-logo">Bird Watcher</a>
+            <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Birds.html">Birds</a></li>
+                <li><a href="#feedback">FeedBack</a></li>
+                <li><a href="#About">About</a></li>
+
+                <a href="log-in.html" class=" lime accent-3 black-text btn" style="border-radius: 50px;">Login</a>
+                <li>
+                    <a href="#" class="tooltipped btn-floating btn-small red accent-3" data-position="bottom" data-tooltip="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="tooltipped btn-floating btn-small indigo darken-4" data-position="bottom" data-tooltip="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="tooltipped btn-floating btn-small  blue lighten-1" data-position="bottom" data-tooltip="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="sidenav #e0e0e0 grey lighten-2" id="mobile-menu">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Birds.html">Birds</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#About">About</a></li>
+
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<h2>*birdname*</h2>
+<div class="container">
+    <img src="{% static 'images/b1.jpg' %}" alt="birdpic" id="image">
+    <div class="">
+        <!--Insert Overlay in 'class' for the hover effect **Work in progress**-->
+        <div class="text btn-floating pink text" style="text-align: center;"><a href="{% static 'images/b1.jpg' %}" download><span><i class="material-icons">download</i></span></a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div>
+        <audio controls>
+            <source src="{% static 'Audio/XC409856 - Greater Sooty Owl - Tyto tenebricosa.mp3' %}">
+                Sorry to hear but it does not Support your browser 
+        </audio>
+    </div>
+</div>
+<div class="container">
+    <h4>bird name:</h4>
+    <p>kage1</p>
+    <h4>bird sciname:</h4>
+    <p>kage1 SciName</p>
+    <h4>bird origin:</h4>
+    <p>kage1 origin</p>
+    <h4>bird moreinfo:</h4><a href="#">here</a>
+    <br>
+    <p1 style="padding: 5%;font-size: 20px;">So this is gonna be some info on kage1 like
+    </p1>
+    <br>
+    <br>
+    <br>
+    <div class="container" style="background-color: bisque; border-style: solid; border-width: 1px;">
+        <p style="padding: 5%;font-size: 20px;"> If your interested in sharing ur content with others you can always upload your own audio and photos!!
+            <br><br> For Photos of birds:<i class="material-icons photoUP">upload</i>
+            <br><br> For Audio of birds:<i class="material-icons audioUP">upload</i></p>
+        <br>
+    </div>
+    <br>
+</div>
+{% endblock %}

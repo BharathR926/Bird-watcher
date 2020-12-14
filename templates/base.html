@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,15 +13,112 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-    <link rel="stylesheet" href="{% static 'css/main.css'%}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/birds.css' %}">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
     <title>Bird Watcher</title>
 </head>
-
+<style>
+    .human {
+        background-image: url("{% static 'images/human_bird.jpg'%}");
+    }
+    
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .wrapper {
+        background: url("{% static 'images/bg.png'%}") no-repeat center;
+    }
+    
+    .image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .Overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #008CBA;
+    }
+    
+    .container:hover .Overlay {
+        opacity: 0.5;
+    }
+    
+    .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+</style>
 
 
 <body>
     {% block content%} {% endblock %}
+    <!-- contact form -->
+    <section class="section container scrollspy" id="feedback ">
+        <div class="row ">
+            <div class="col s12 l5 ">
+                <h2 class="indigo-text text-darken-4 ">FeedBack</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
+                <p>Mauris dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida urna, vitae scelerisque erat ornare nec.</p>
+                <p>Lorem ipsum dolor Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, blanditiis quia natus officia quaerat illo soluta. Vero totam rem fugiat? Pariatur error commodi facilis omnis harum blanditiis fugit fugiat voluptatem!
+                    sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
+                <p>Mauris dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida urna, vitae scelerisque erat ornare nec.</p>
+            </div>
+            <div class="col s12 l5 offset-l2 ">
+                <form>
+                    <div class="input-field ">
+                        <i class="material-icons prefix ">email</i>
+                        <input type="email " id="email ">
+                        <label for="email ">Your Email</label>
+                    </div>
+                    <div class="input-field ">
+                        <i class="material-icons prefix ">message</i>
+                        <textarea id="message " class="materialize-textarea " cols="20 " rows="20 "></textarea>
+                        <label for="message ">Your Message</label>
+                    </div>
+                    <div class="input-field center ">
+                        <button class="btn ">Submit</button>
+                    </div>
+                    <div class="stars ">
+                        <form action=" ">
+                            <input class="star star-5 " id="star-5 " type="radio " name="star " />
+                            <label class="star star-5 " for="star-5 "></label>
+                            <input class="star star-4 " id="star-4 " type="radio " name="star " />
+                            <label class="star star-4 " for="star-4 "></label>
+                            <input class="star star-3 " id="star-3 " type="radio " name="star " />
+                            <label class="star star-3 " for="star-3 "></label>
+                            <input class="star star-2 " id="star-2 " type="radio " name="star " />
+                            <label class="star star-2 " for="star-2 "></label>
+                            <input class="star star-1 " id="star-1 " type="radio " name="star " />
+                            <label class="star star-1 " for="star-1 "></label>
+                        </form>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
     <!-- footer -->
     <footer class="page-footer grey darken-3 scrollspy" id="About">
         <div class="container">
